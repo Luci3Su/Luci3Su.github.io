@@ -34,18 +34,22 @@ padding: 25px;
 
 
 <body>
-<div class="container">
- <div class="row">
-  <div class="col-md-6">
+
 <img src="smallcat.jpg" class="center" style= "width: 800px; border-radius: 50%;  border-style: solid;
   border-color: #FE0000; border-style: ridge; "/>
-</div>
-  <div class="col-md-6">
+
+<script>
+      alert("Hiya Mowag <3")
+</script>
+
+
   <p> Please use the form below to enter Trip details
 </p>
 <br/>
-<p> Car Registration: <input id="CarReg" type="text"/>
+<p> Trip length (miles): <input id="Miles" type="number"/>
 </p>
+<a href="blah.html" onclick="return CheckMiles();">
+Click here to submit mileage </a>
 <p> Date of arrival: <input id="arriveDate" type="date"/>
 </p>
 <p> Time of arrival: <input id="arriveTime" type="time"/>
@@ -57,8 +61,18 @@ padding: 25px;
 <br/>
 <input id="submitButton" type="button" value="Submit"/>
 </p>
-</div>
-   </div>
-    </div>
+
+<script>
+  function CheckMiles () {
+	var miles = document.getElementById("Miles");
+	var milesText= miles.value;
+	if(milesText < 1) {
+return true;
+}
+    alert("That's too many miles!");
+return false;
+}
+</script>
+  
 </body>
 </html>
